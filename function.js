@@ -50,3 +50,18 @@ var game = [{
 
     document.getElementById("gameTable").innerHTML = tableCode;
   };
+
+  // To move to the page that adds a new game:
+  function page2(){
+    
+  }
+
+  // To add a new game along with the platform it's played on:
+function CreateGame(){
+  let newGame;
+  newGame = document.getElementById("gameName").value;
+  let platform;
+  platform = document.getElementById("platformName").value;
+  console.log(newGame);
+  console.log(platform);
+}

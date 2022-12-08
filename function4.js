@@ -49,8 +49,11 @@ window.onload = (event) => {
     var stuff = `{"Player":"${player}", "Score":"${score}", "Time":"${time}"}`
 
     //Validation of data via if/else statements
+    const queryString = window.location.search;
+    var urlParameters = new URLSearchParams(queryString);
+    const url = urlParameters.get("id");
 
-    fetch("https://lime-faithful-hippo.cyclic.app/api/games",{
+    fetch(`https://lime-faithful-hippo.cyclic.app/api/leaderBoard/${url}`,{
       method:"POST",
       body: stuff,
       headers: {"Content-type":"application/json; charset=UTF-8"}

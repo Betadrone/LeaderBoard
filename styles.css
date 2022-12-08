@@ -1,5 +1,30 @@
+/* All the styles on each and every page */
 
 table, th, td{
     border-style: solid;
-    border: 1px solid black;
+    border-color: #585BD8;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+    background-color: #fdfdfd;
+}
+button{
+    transition-duration: 0.4s;
+    border-radius: 12px;
+    font-size: 15px;
+    padding: 8px;
+}
+button:hover {
+    background-color: #0205c4;
+    color: white;
+}
+.center{
+    text-align: center;
+}
+form{
+    margin-left: 500px;
+    margin-right: 500px;
+    border-style: ridge;
+    border-width: 50%;
 }

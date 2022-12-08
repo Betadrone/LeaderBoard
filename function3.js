@@ -1,4 +1,6 @@
-
+//Page 3 code...
+//This follows the link from the games table
+//and loads that specific leaderBoard
 window.onload = (event) => {
     var tableCode = 
     "<table>\
@@ -35,8 +37,12 @@ window.onload = (event) => {
         var tag = document.getElementById("gameLeaderBoard");
         tag.innerHTML = `${jsonObject.GameName} LeaderBoard`;
 
-    })
-  
+        //add id part to page link
+        var tag = document.getElementById("ALB");
+        tag.href = `page4.html?id=${jsonObject.id}`;
+      })
+      console.log(69);
+      
 
     tableCode += "</table>";
   

@@ -1,4 +1,6 @@
+//Page 1 code...
 //To load the games data and table info as the page loads
+
 window.onload = (event) => {
   var tableCode = 
   "<table>\

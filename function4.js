@@ -81,11 +81,12 @@ window.onload = (event) => {
         })
         .then(function(jsonObject){
             console.log(jsonObject);
-            document.getElementById("msg2").innerHTML = jsonObject.message;
+            document.getElementById("msg2").innerHTML = `Server Response: ${jsonObject.message}`;
             console.log(jsonObject.message);
         })
         .catch(function(error){
           console.log(`Error: ${error}`);
+          document.getElementById("msg2").innerHTML = `Error: ${error}`;
         })
         .then(function(something){
             location.replace(`Page3.html?id=${url}`)
@@ -106,13 +107,14 @@ window.onload = (event) => {
         })
         .then(function(jsonObject){
             console.log(jsonObject);
-            document.getElementById("msg2").innerHTML = jsonObject.message;
+            document.getElementById("msg2").innerHTML = `Server Response: ${jsonObject.message}`;
             console.log(jsonObject.message);
         })
         .catch(function(error){
           console.log(`Error: ${error}`);
         })
-        .then(function(something){
+        .then(function(something)
+        {
             location.replace(`Page3.html?id=${url}`)
         })
       }
@@ -129,7 +131,7 @@ window.onload = (event) => {
       })
       .then(function(jsonObject){
           console.log(jsonObject);
-          document.getElementById("msg2").innerHTML = jsonObject.message;
+          document.getElementById("msg2").innerHTML = `Server Response: ${jsonObject.message}`;
           console.log(jsonObject.message);
       })
       .catch(function(error){
@@ -140,3 +142,4 @@ window.onload = (event) => {
       })
     }
   }
+  console.log("70")

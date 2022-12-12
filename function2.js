@@ -55,7 +55,7 @@ function CreateGame(){
         })
         .then(function(something){
     
-            location.replace("Games.html");
+            location.replace("index.html");
     
         })
     }

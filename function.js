@@ -27,3 +27,7 @@ window.onload = (event) => {
 };
 
 console.log("1")
+
+function MovePage(){
+  location.replace("Page2.html");
+}

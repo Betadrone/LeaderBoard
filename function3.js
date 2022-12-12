@@ -33,19 +33,26 @@ window.onload = (event) => {
         <td>${currentGame.Score}</td>\
         <td>${currentGame.Time}</td></tr>`;
 
-        // Write the game name above its leaderBoard
-        var tag = document.getElementById("gameLeaderBoard");
-        tag.innerHTML = `${jsonObject.GameName} LeaderBoard`;
-
-        //add id part to page link
-        var tag = document.getElementById("ALB");
-        tag.href = `page4.html?id=${jsonObject.id}`;
       })
+
+      // Write the game name above its leaderBoard
+      var tag = document.getElementById("gameLeaderBoard");
+      tag.innerHTML = `${jsonObject.GameName} LeaderBoard`;
+      
       console.log(69);
       
-
     tableCode += "</table>";
   
     document.getElementById("detailTable").innerHTML = tableCode;
   })
   };
+
+  function MovePage(){
+
+  const queryString = window.location.search;
+  var urlParameters = new URLSearchParams(queryString);
+  const url = urlParameters.get("id");
+
+
+  location.replace(`Page4.html?id=${url}`);
+}

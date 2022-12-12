@@ -16,21 +16,50 @@ function CreateGame(){
     var stuff = `{"name":"${newGame}", "platform":"${platform}"}`
 
     //Validation of data via if/else statements
+    if(newGame == null || newGame == "" || platform == null || platform == "")
+    {
+        if(newGame == null || newGame == "")
+        {
+            document.getElementById("msg").innerHTML = "Error: Please enter a game name";
+        }
+        else if(platform == null || platform == "")
+        {
+            document.getElementById("msg").innerHTML = "Error: Please enter a platform name for the game";
+        }
+    }
+    else
+    {
 
-    fetch("https://lime-faithful-hippo.cyclic.app/api/games",{
-      method:"POST",
-      body: stuff,
-      headers: {"Content-type":"application/json; charset=UTF-8"}
-    })
-    .then(function(response){
-        return response.json;
-    })
-    .then(function(jsonObject){
-        console.log(jsonObject);
-        document.getElementById("msg") = jsonObject.message;
-    })
-    .catch(function(error){
-      console.log(`Error: ${error}`);
-    })
+        fetch("https://lime-faithful-hippo.cyclic.app/api/games",{
+    
+          method:"POST",
+          body: stuff,
+          headers: {"Content-type":"application/json; charset=UTF-8"}
+          
+        })
+        .then(function(response){
+    
+            return response.json;
+    
+        })
+        .then(function(jsonObject){
+    
+            console.log(jsonObject);
+            document.getElementById("msg") = jsonObject.message;
+    
+        })
+        .catch(function(error){
+    
+            console.log(`Error: ${error}`);
+    
+        })
+        .then(function(something){
+    
+            location.replace("Games.html");
+    
+        })
+    }
+
+
   }
   
